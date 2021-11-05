@@ -1,0 +1,102 @@
+/*FONTS*/
+
+/*HOMEPAGE HEADINGS*/
+
+body {
+background-color: #001BF0;
+}
+
+.title-container {
+     display: flex;
+  text-align: center;
+  align-items: center; ; 
+  justify-content: center;
+}
+
+.row {
+    margin: 0;
+}
+
+#titleone {
+    font-size: 40px;
+ font-family: bungee, sans-serif;
+font-weight: 500;
+font-style: normal;
+line-height: 35px;
+color: #000950;
+}
+
+#ultimate {
+    font-size: 90px;
+    line-height: 90px;
+    font-family: bungee, sans-serif;
+font-weight: 800;
+font-style: normal;
+color: white;
+}
+
+#knowledge {
+    font-size: 40px;
+    font-family: bungee, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #000950;
+}
+
+#quiz {
+    font-size: 40px;
+    font-family: bungee, sans-serif;
+font-weight: 400;
+font-style: normal;
+line-height: 25px;
+color: #000950;
+}
+
+/*BUTTONS SECTION*/
+
+#buttonsdiv {
+    max-width: 100%;
+    height: 350px;
+    background-color: #BEC5FF;
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 25px;
+}
+
+/*ICONS*/
+
+#volume-icon {
+    padding-top: 25px;
+    size: 300px;
+}
+
+#playeasy-icon {
+    padding-top: 25px;
+}
+
+#playhard-icon {
+    padding-top: 25px;
+}
+
+#question-icon {
+    padding-top: 25px;
+}
+
+.icontext {
+    font-size: 17px;
+    font-family: bungee, sans-serif
+}
