@@ -8,8 +8,8 @@
     <title>Ultimate Knowledge Quiz</title>
 
     <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!--Abode Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/ptu1rpx.css">
@@ -30,7 +30,7 @@
                     An
                 </div>
                 <div id="ultimate">
-                    ULTIMATE
+                    <p class="ml2">ULTIMATE</p>
                 </div>
                 <div id="knowledge">
                     General Knowledge
@@ -43,48 +43,75 @@
     </header>
 
 
-    <div class="buttons-container">
-        <div id="buttonsdiv">
-            <div class="icons">
-                <button class="square">
-                    <!--Icons: https://icons8.com -->
-                    <img src="https://img.icons8.com/ios-filled/96/000000/no-audio--v2.png" alt="volume-icon"
-                        id="volume-icon" />
-                    <p class="icontext">VOLUME</p>
+    <section class="buttons-container container">
+        <div class="game-btn-container col-12 col-sm-8 offset-sm-2 col-lg-10 offset-lg-1 d-flex align-items-center d-flex justify-content-center"
+            id="buttonsdiv">
+            <div class="row">
+                <!--Buttons-->
+                <div class="icons-wrapper col-6 col-lg-3">
+                    <button class="square">
+                        <i class="fas fa-volume-up fa-6x"></i>
+                        <p class="icontext">VOLUME</p>
+                    </button>
+                </div>
+                <div class="icons-wrapper col-6 col-lg-3">
+                    <button class="square">
+                        <!--Icons: https://icons8.com -->
+                        <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playeasy-icon"
+                            id="playeasy-icon" />
+                        <p class="icontext">PLAY EASY</p>
+                    </button>
+                </div>
+                <div class="icons-wrapper col-6 col-lg-3">
+                    <button class="square">
+                        <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playhard-icon"
+                            id="playhard-icon" />
+                        <p class="icontext">PLAY HARD</p>
+                    </button>
+                </div>
+                <div class="icons-wrapper col-6 col-lg-3">
+                    <button type="button" class="square" data-bs-toggle="modal" data-target="#questionModal">
+                        <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="question-icon"
+                            id="question-icon" />
+                        <p class="icontext">HOW TO PLAY</p>
+                    </button>
+                </div>
             </div>
-            <div class="icons">
-                <button class="square">
-                    <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playeasy-icon"
-                        id="playeasy-icon" />
-                    <p class="icontext">PLAY EASY</p>
-            </div>
-            <div class="icons">
-                <button class="square">
-                    <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playhard-icon"
-                        id="playhard-icon" />
-                    <p class="icontext">PLAY HARD</p>
-            </div>
-            <div class="icons">
-                <button class="square">
-                    <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="question-icon"
-                        id="question-icon" />
-                    <p class="icontext">HOW TO PLAY</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="questionModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
 
 
 
-    <!-- Bootstrap JavaScript Bundle-->
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
 
     <!--Heading JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <!--JavaScript link-->
     <script src="assets/js/script.js" type="text/javascript"></script>
+
+    <!-- Bootstrap JavaScript Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 
