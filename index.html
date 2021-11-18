@@ -22,82 +22,117 @@
 </head>
 
 <body>
-    <!--FIRST PAGE-->
-    <header class="top-header" id="heading">
-        <div class="title-container">
-            <div class="row">
-                <div id="titleone">
-                    An
+    <section id="firstpagesection">
+        <!--FIRST PAGE-->
+        <header class="top-header" id="heading">
+            <div class="title-container">
+                <div class="row">
+                    <div id="titleone">
+                        An
+                    </div>
+                    <div id="ultimate">
+                        <p class="ml2">ULTIMATE</p>
+                    </div>
+                    <div id="knowledge">
+                        General Knowledge
+                    </div>
+                    <div id="quiz">
+                        Quiz
+                    </div>
                 </div>
-                <div id="ultimate">
-                    <p class="ml2">ULTIMATE</p>
+            </div>
+        </header>
+
+
+        <section class="buttons-container container">
+            <div class="game-btn-container col-12 col-sm-8 offset-sm-2 col-lg-10 offset-lg-1 d-flex align-items-center d-flex justify-content-center"
+                id="buttonsdiv">
+                <div class="row">
+                    <!--Buttons-->
+                    <div class="icons-wrapper col-6 col-lg-3">
+                        <button id="volumebutton">
+                            <img src="./assets/images/icons8-volume-96.png" alt="volume-icon" id="volume-icon" />
+                            <p class="icontext">VOLUME</p>
+                        </button>
+                    </div>
+                    <div class="icons-wrapper col-6 col-lg-3">
+                        <button class="square">
+                            <!--Icons: https://icons8.com -->
+                            <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png"
+                                alt="playeasy-icon" id="playeasy-icon" />
+                            <p class="icontext">PLAY EASY</p>
+                        </button>
+                    </div>
+                    <div class="icons-wrapper col-6 col-lg-3">
+                        <button class="square">
+                            <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png"
+                                alt="playhard-icon" id="playhard-icon" />
+                            <p class="icontext">PLAY HARD</p>
+                        </button>
+                    </div>
+                    <div class="icons-wrapper col-6 col-lg-3">
+                        <button type="button" class="square" data-bs-toggle="modal" data-bs-target="#questionModal">
+                            <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="question-icon"
+                                id="question-icon" />
+                            <p class="icontext">HOW TO PLAY</p>
+                        </button>
+                    </div>
                 </div>
-                <div id="knowledge">
-                    General Knowledge
-                </div>
-                <div id="quiz">
-                    Quiz
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="questionModalLabel">Instructions</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modalsubheading">How to Play</h2>
+                        <p class="modalparagraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
+                            question by
+                            clicking on one of the
+                            options and press submit before the timer runs out. To pause or return home press the home
+                            button in the right top corner. To turn on or mute the music click on the volume button.</p>
+                        <h2 class="modalsubheading">Game Modes</h2>
+                        <p class="modalparagraph">Easy Mode: The timer will be set to one minute. <br> Hard Mode: The
+                            timer
+                            will set to 30 seconds
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="close-button"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-
-    <section class="buttons-container container">
-        <div class="game-btn-container col-12 col-sm-8 offset-sm-2 col-lg-10 offset-lg-1 d-flex align-items-center d-flex justify-content-center"
-            id="buttonsdiv">
-            <div class="row">
-                <!--Buttons-->
-                <div class="icons-wrapper col-6 col-lg-3">
-                    <button class="square">
-                        <i class="fas fa-volume-up fa-6x"></i>
-                        <p class="icontext">VOLUME</p>
-                    </button>
-                </div>
-                <div class="icons-wrapper col-6 col-lg-3">
-                    <button class="square">
-                        <!--Icons: https://icons8.com -->
-                        <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playeasy-icon"
-                            id="playeasy-icon" />
-                        <p class="icontext">PLAY EASY</p>
-                    </button>
-                </div>
-                <div class="icons-wrapper col-6 col-lg-3">
-                    <button class="square">
-                        <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png" alt="playhard-icon"
-                            id="playhard-icon" />
-                        <p class="icontext">PLAY HARD</p>
-                    </button>
-                </div>
-                <div class="icons-wrapper col-6 col-lg-3">
-                    <button type="button" class="square" data-bs-toggle="modal" data-target="#questionModal">
-                        <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="question-icon"
-                            id="question-icon" />
-                        <p class="icontext">HOW TO PLAY</p>
-                    </button>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="questionModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+    <!--SECOND PAGE-->
+    <section id="secondpagesection">
+        <!--Header Buttons-->
+        <header>
+            <div id="headervoldiv">
+                <button id="headervolbtn">
+                    <img src="./assets/images/icons8-audio-50.png" alt="headervolimg" id="header-volimg" />
+                </button>
             </div>
+            <div>
+                <button id="homebtn">
+                    <img src="./assets/images/icons8-home-50.png" alt="headerhomeimg" id="header-homeimg" />
+                </button>
+            </div>
+        </header>
+        <!--Timer-->
+        <div class="container" id="timer">
+            <p id="timerCountdown"></p>
         </div>
-    </div>
+
+    </section>
 
 
 

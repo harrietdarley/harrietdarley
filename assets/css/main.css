@@ -8,6 +8,7 @@ body {
 background-color:#1F75FE;
 }
 
+
 .title-container {
      display: flex;
   text-align: center;
@@ -73,7 +74,7 @@ display: flex;
     margin-bottom: 15px;
 }
 
-
+#volumebutton,
 .square {
     width: 150px;
     height: 150px;
@@ -83,8 +84,9 @@ display: flex;
 
 /*ICONS*/
 
-.fa-volume-up {
-   padding-top: 25px;  
+#volume-icon {
+   padding-top: 25px; 
+   
 }
 
 #playeasy-icon {
@@ -102,6 +104,63 @@ display: flex;
 
 .icontext {
     font-size: 17px;
-    font-family: bungee, sans-serif
+    font-family: bungee, sans-serif;
 }
 
+/*Modal*/
+.modal-content {
+    background-color:#ACE5EE;
+}
+
+.modal-title {
+    font-family: bungee, sans-serif;
+    font-weight: 800;
+}
+
+.modalsubheading {
+    font-family: bungee, sans-serif;
+}
+
+.modalparagraph {
+    font-family: monospace;
+}
+
+#close-button {
+    background-color: #1F75FE;
+    box-shadow: 2px;
+    font-family: monospace;
+}
+
+/*SECONDPAGE*/
+/*Buttons*/
+#headervoldiv {
+    width: fit-content;
+}
+
+#headervolbtn {
+    background: none;
+    border: none;
+}
+
+#homebtn {
+   float: right;
+   background: none;
+   border: none;
+}
+
+#timer {
+    width: 200px;
+    border-radius: 30px;
+    background-color: red; 
+    text-align: center;  
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#timerCountdown {
+    padding-top: 15px;
+    font-size: 36px;
+    font-weight: bold;
+}
