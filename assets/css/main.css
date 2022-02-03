@@ -8,6 +8,10 @@ body {
 background-color:#1F75FE;
 }
 
+.hidden {
+    display: none;
+}
+
 
 .title-container {
      display: flex;
@@ -74,8 +78,10 @@ display: flex;
     margin-bottom: 15px;
 }
 
-#volumebutton,
-.square {
+#volume-button,
+#playeasy-button,
+#playhard-button,
+#question-button {
     width: 150px;
     height: 150px;
     background-color: white;
@@ -83,12 +89,6 @@ display: flex;
 }
 
 /*ICONS*/
-
-#volume-icon {
-   padding-top: 25px; 
-   
-}
-
 #playeasy-icon {
     padding-top: 25px;
 }
@@ -132,35 +132,102 @@ display: flex;
 }
 
 /*SECONDPAGE*/
+#secondpagesection {
+    background-color: #262934;
+}
+
 /*Buttons*/
-#headervoldiv {
-    width: fit-content;
+.vol-img {
+    margin-top: 25px;
+}
+
+.small {
+    height: 50px;
+    width: 50px;
 }
 
 #headervolbtn {
-    background: none;
+ background:none;
     border: none;
+    margin-left: 10px;
 }
 
 #homebtn {
    float: right;
    background: none;
    border: none;
+   margin-top: 25px;
+    margin-right: 10px;
 }
 
+/*Question*/
+
+#questiondiv {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#questionpara {
+font-size: 30px;
+color: lightgray;
+}
+
+/*Timer*/
 #timer {
-    width: 200px;
-    border-radius: 30px;
-    background-color: red; 
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #ACE5EE; 
     text-align: center;  
     padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 
 #timerCountdown {
     padding-top: 15px;
     font-size: 36px;
     font-weight: bold;
+}
+
+/*Answers*/
+#answersdiv {
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.answers-wrapper {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#answersbutton, 
+#answersbutton-two,
+#answersbutton-three,
+#answersbutton-four {
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+#answersbutton {
+    background-color: red;
+}
+
+#answersbutton-two {
+    background-color: yellow;
+}
+
+#answersbutton-three {
+    background-color: blue;
+}
+
+#answersbutton-four {
+    background-color: green;
 }

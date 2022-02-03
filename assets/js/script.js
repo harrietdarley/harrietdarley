@@ -1,3 +1,7 @@
+//GLOBAL VARIABLES 
+const homeSection = document.getElementById('firstpagesection');
+const gameSection = document.getElementById('secondpagesection');
+
 //Text Animation https://tobiasahlin.com
 // Get all the elements with the .ml2 class
 let textWrapper = document.querySelectorAll('.ml2');
@@ -27,36 +31,34 @@ anime.timeline({ loop: true })
     });
 
 
-//VOLUME BUTTON ONE
 
-initAudioPlayer = () => {
+//VOLUME FUNCTION
+const mute = (audio, btn1, btn2) => {
+    if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+        btn1.src = "assets/images/icons8-volume-96.png";
+        btn2.src = "assets/images/icons8-volume-96.png";
+    } else {
+        audio.muted = true;
+        audio.pause();
+        btn1.src = "assets/images/icons8-mute-96.png";
+        btn2.src = "assets/images/icons8-mute-96.png";
+    }
+}
+
+//VOLUME BUTTONS
+const initAudioPlayer = () => {
     const audio = new Audio();
     audio.src = "assets/audio/bensound-allthat.mp3";
     audio.loop = true;
-    audio.play();
-    //set object references
-    const volumebutton = document.getElementById("volume-icon");
+    const volBtns = document.getElementsByClassName('vol-img');
     //add event handling 
-    volumebutton.addEventListener("click", mute);
-    //functions
-    function mute() {
-        if (audio.muted) {
-            audio.muted = false;
-            audio.play();
-            volumebutton.src = "assets/images/icons8-volume-96.png";
-        } else {
-            audio.muted = true;
-            audio.pause();
-            volumebutton.src = "assets/images/icons8-mute-96.png";
-        }
-    }
+    volBtns[0].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
+    volBtns[1].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
 }
-window.addEventListener("load", initAudioPlayer);
 
-//VOLUME BUTTON 2 
-
-
-//HOME BUTTON 
+window.addEventListener('load', initAudioPlayer);
 
 //TIMER
 let timeLeft = 30;
@@ -72,3 +74,26 @@ function countdown() {
         timeLeft--;
     }
 }
+
+//HIDING HOME PAGE WHEN CLICKING PLAY
+const startGame = () => {
+    homeSection.classList.add('hidden');
+    gameSection.classList.remove('hidden');
+
+}
+
+const playEasyButton = document.getElementById('playeasy-button');
+const playHardButton = document.getElementById('playhard-button');
+
+playEasyButton.addEventListener('click', startGame);
+playHardButton.addEventListener('click', startGame);
+
+//ADDING HOME BUTTON FUNCTIONALITY
+const goHome = () => {
+    homeSection.classList.remove('hidden');
+    gameSection.classList.add('hidden');
+}
+
+const goHomeButton = document.getElementById('homebtn');
+
+goHomeButton.addEventListener('click', goHome);
