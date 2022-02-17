@@ -1,8 +1,15 @@
 //GLOBAL VARIABLES 
 const homeSection = document.getElementById('firstpagesection');
 const gameSection = document.getElementById('secondpagesection');
+const elem = document.getElementById('timerCountdown');
+const volBtns = document.getElementsByClassName('vol-img');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.querySelector('#answersdiv .row');
+const buttonsAnswer = document.getElementsByClassName('answersdiv');
+const nextButton = document.getElementById('next-button');
+let color = "red";
+let overallScore = 0;
+
 
 //Text Animation https://tobiasahlin.com
 // Get all the elements with the .ml2 class
@@ -54,7 +61,6 @@ const initAudioPlayer = () => {
     const audio = new Audio();
     audio.src = "assets/audio/bensound-allthat.mp3";
     audio.loop = true;
-    const volBtns = document.getElementsByClassName('vol-img');
     //add event handling 
     volBtns[0].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
     volBtns[1].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
@@ -64,13 +70,11 @@ window.addEventListener('load', initAudioPlayer);
 
 //TIMER
 let timeLeft = 30;
-const elem = document.getElementById('timerCountdown');
 const timerId = setInterval(countdown, 1000);
 
 function countdown() {
     if (timeLeft == -1) {
         clearTimeout(timerId);
-
     } else {
         elem.innerHTML = timeLeft + ':00';
         timeLeft--;
@@ -107,9 +111,16 @@ playHardButton.addEventListener('click', startGame);
 //GAME DATA 
 let shuffledQuestions, currentQuestionIndex;
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion();
+})
+
+
 const setNextQuestion = () => {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
 
 const showQuestion = (gameData) => {
     questionElement.innerText = gameData.question;
@@ -117,9 +128,7 @@ const showQuestion = (gameData) => {
     gameData.answer.forEach((answer, index) => {
         const answerButton = `
             <div class="answers-wrapper col-lg-6 col-md-6 col-lg-3">
-                <button class="btn answer-button" id="answersbutton-${index + 1}" onclick="selectAnswer()">
-                    ${answer.text}
-                </button>
+                <button class="btn answer-button" id="answersbutton-${index + 1}" onclick="selectAnswer(event)">${answer.text}</button>
             </div>
         `;
         answersBlock += answerButton;
@@ -127,18 +136,29 @@ const showQuestion = (gameData) => {
     answerButtonsElement.innerHTML = answersBlock;
 }
 
-const selectAnswer = (e) => {
+const selectAnswer = (event) => {
+    const selectedButton = event.target;
+    const selectedAnswer = event.target.textContent;
+    const answers = shuffledQuestions[currentQuestionIndex].answer;
+    const answerToValidate = answers.find(answer => answer.text === selectedAnswer);
+    if (answerToValidate.correct) {
+        selectedButton.style.background = "green";
+        overallScore++;
+    } else {
+        selectedButton.style.background = "red";
+    }
+}
 
+
+nextButton.onclick = () => {
 
 }
 
-const answerCorrect = () => {
-    document.getElementById('answersbutton').style.backgroundColor = "green";
-}
+//RECEIVING SCORE
 
-const answerWrong = () => {
-    document.getElementById('answersbutton').style.backgroundColor = "red";
-}
+//HIDE GAME PAGE 
+
+
 
 const gameData = [
     {
@@ -149,6 +169,7 @@ const gameData = [
             { text: 'Italy', correct: false },
             { text: 'Monaco', correct: false }
         ]
+
     },
     {
         question: 'Which city is Banksy from?',
