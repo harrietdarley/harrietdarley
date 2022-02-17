@@ -1,13 +1,18 @@
 //GLOBAL VARIABLES 
 const homeSection = document.getElementById('firstpagesection');
 const gameSection = document.getElementById('secondpagesection');
-const elem = document.getElementById('timerCountdown');
+const scoreSection = document.getElementById('thirdpagesection');
+const timerCountdown = document.getElementById('timerCountdown');
+const playEasyButton = document.getElementById('playeasy-button');
+const playHardButton = document.getElementById('playhard-button');
 const volBtns = document.getElementsByClassName('vol-img');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.querySelector('#answersdiv .row');
 const buttonsAnswer = document.getElementsByClassName('answersdiv');
 const nextButton = document.getElementById('next-button');
-let color = "red";
+const scoreText = document.getElementById('scoretext');
+
+let answerSelected = false;
 let overallScore = 0;
 
 
@@ -69,16 +74,23 @@ const initAudioPlayer = () => {
 window.addEventListener('load', initAudioPlayer);
 
 //TIMER
+let initialTimer = 30;
 let timeLeft = 30;
-const timerId = setInterval(countdown, 1000);
+let timerId = null;
 
-function countdown() {
+const countdown = () => {
     if (timeLeft == -1) {
-        clearTimeout(timerId);
+        clearInterval(timerId);
     } else {
-        elem.innerHTML = timeLeft + ':00';
+        timerCountdown.innerHTML = timeLeft;
         timeLeft--;
     }
+}
+
+const startTimer = () => {
+    clearInterval(timerId);
+    timerId = setInterval(countdown, 1000);
+    timerCountdown.innerHTML = timeLeft;
 }
 
 //ADDING HOME BUTTON FUNCTIONALITY
@@ -93,7 +105,8 @@ goHomeButton.addEventListener('click', goHome);
 
 
 //START GAME 
-const startGame = () => {
+const startGame = (_initialTimer) => {
+    initialTimer = _initialTimer;
     homeSection.classList.add('hidden');
     gameSection.classList.remove('hidden');
     shuffledQuestions = gameData.sort(() => Math.random() - .5);
@@ -101,24 +114,39 @@ const startGame = () => {
     setNextQuestion();
 }
 
-const playEasyButton = document.getElementById('playeasy-button');
-const playHardButton = document.getElementById('playhard-button');
 
-playEasyButton.addEventListener('click', startGame);
-playHardButton.addEventListener('click', startGame);
+playEasyButton.addEventListener('click', () => startGame(60));
+playHardButton.addEventListener('click', () => startGame(30));
 
 
 //GAME DATA 
 let shuffledQuestions, currentQuestionIndex;
 
+//NEXT BUTTON
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion();
+    if (answerSelected) {
+        currentQuestionIndex++;
+        if (currentQuestionIndex >= shuffledQuestions.length) {
+            showScoreScreen();
+        }
+        else {
+            setNextQuestion();
+        }
+        answerSelected = false;
+    }
 })
 
+const showScoreScreen = () => {
+    homeSection.classList.add('hidden');
+    gameSection.classList.add('hidden');
+    scoreSection.classList.remove('hidden');
+    scoreText.innerText = `You got ${overallScore} out of ${shuffledQuestions.length}`;
+}
 
 const setNextQuestion = () => {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
+    timeLeft = initialTimer;
+    startTimer();
 }
 
 
@@ -136,7 +164,11 @@ const showQuestion = (gameData) => {
     answerButtonsElement.innerHTML = answersBlock;
 }
 
+
 const selectAnswer = (event) => {
+    if (answerSelected || timeLeft <= 0)
+        return;
+    answerSelected = true;
     const selectedButton = event.target;
     const selectedAnswer = event.target.textContent;
     const answers = shuffledQuestions[currentQuestionIndex].answer;
@@ -150,13 +182,11 @@ const selectAnswer = (event) => {
 }
 
 
-nextButton.onclick = () => {
-
-}
-
 //RECEIVING SCORE
 
 //HIDE GAME PAGE 
+
+
 
 
 
