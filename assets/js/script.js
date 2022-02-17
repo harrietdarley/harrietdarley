@@ -6,11 +6,13 @@ const timerCountdown = document.getElementById('timerCountdown');
 const playEasyButton = document.getElementById('playeasy-button');
 const playHardButton = document.getElementById('playhard-button');
 const volBtns = document.getElementsByClassName('vol-img');
+const goHomeButton = document.getElementById('homebtn');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.querySelector('#answersdiv .row');
 const buttonsAnswer = document.getElementsByClassName('answersdiv');
 const nextButton = document.getElementById('next-button');
 const scoreText = document.getElementById('scoretext');
+const homeButtonTwo = document.getElementById('second-home-btn')
 
 let answerSelected = false;
 let overallScore = 0;
@@ -99,8 +101,6 @@ const goHome = () => {
     gameSection.classList.add('hidden');
 }
 
-const goHomeButton = document.getElementById('homebtn');
-
 goHomeButton.addEventListener('click', goHome);
 
 
@@ -140,7 +140,7 @@ const showScoreScreen = () => {
     homeSection.classList.add('hidden');
     gameSection.classList.add('hidden');
     scoreSection.classList.remove('hidden');
-    scoreText.innerText = `You got ${overallScore} out of ${shuffledQuestions.length}`;
+    scoreText.innerText = `You scored: ${overallScore} / ${shuffledQuestions.length} !`;
 }
 
 const setNextQuestion = () => {
@@ -148,7 +148,6 @@ const setNextQuestion = () => {
     timeLeft = initialTimer;
     startTimer();
 }
-
 
 const showQuestion = (gameData) => {
     questionElement.innerText = gameData.question;
@@ -181,13 +180,13 @@ const selectAnswer = (event) => {
     }
 }
 
+const returnHomePage = () => {
+    homeSection.classList.remove('hidden');
+    gameSection.classList.add('hidden');
+    scoreSection.classList.add('hidden');
+}
 
-//RECEIVING SCORE
-
-//HIDE GAME PAGE 
-
-
-
+homeButtonTwo.addEventListener('click', returnHomePage);
 
 
 const gameData = [
@@ -199,7 +198,6 @@ const gameData = [
             { text: 'Italy', correct: false },
             { text: 'Monaco', correct: false }
         ]
-
     },
     {
         question: 'Which city is Banksy from?',
@@ -289,6 +287,87 @@ const gameData = [
             { text: 'New Jersey', correct: false },
             { text: 'New York', correct: true },
             { text: 'Connecticut', correct: false }
+        ]
+    },
+    {
+        question: 'How many keys are there on a piano?',
+        answer: [
+            { text: '52', correct: false },
+            { text: '88', correct: true },
+            { text: '91', correct: false },
+            { text: '75', correct: false }
+        ]
+    },
+    {
+        question: 'Who authored The Hunger Games book series?',
+        answer: [
+            { text: 'James Dashner', correct: false },
+            { text: 'Suzanne Collins', correct: true },
+            { text: 'Veronica Roth', correct: false },
+            { text: 'M A Bennett', correct: false }
+        ]
+    },
+    {
+        question: 'How many hearts does an octopus have?',
+        answer: [
+            { text: '1', correct: false },
+            { text: '3', correct: true },
+            { text: '8', correct: false },
+            { text: '2', correct: false }
+        ]
+    },
+    {
+        question: 'Who sang 2003 hit Stacy’s Mom?',
+        answer: [
+            { text: 'The Strokes', correct: false },
+            { text: 'Fountains of Wayne', correct: true },
+            { text: 'Weezer', correct: false },
+            { text: 'Teenage Fanclub', correct: false }
+        ]
+    },
+    {
+        question: 'Name the eldest Weasley sibling in Harry Potter',
+        answer: [
+            { text: 'Bill', correct: true },
+            { text: 'George', correct: false },
+            { text: 'Ron', correct: false },
+            { text: 'Fred', correct: false }
+        ]
+    },
+    {
+        question: 'Who played 007 in film, Goldfinger?',
+        answer: [
+            { text: 'Sean Connery', correct: true },
+            { text: 'Daniel Craig', correct: false },
+            { text: 'Roger Moore', correct: false },
+            { text: 'Timothy Dalton', correct: false }
+        ]
+    },
+    {
+        question: 'Who discovered Penicillin?',
+        answer: [
+            { text: 'Alexander Fleming', correct: true },
+            { text: 'Selman Waksman', correct: false },
+            { text: 'Marie Curie', correct: false },
+            { text: 'Abelardo Aguilar', correct: false }
+        ]
+    },
+    {
+        question: 'Where is the original Starry Night by Vincent Van Gogh housed?',
+        answer: [
+            { text: 'New York', correct: false },
+            { text: 'Rome', correct: false },
+            { text: 'Paris', correct: true },
+            { text: 'Amsterdam', correct: false }
+        ]
+    },
+    {
+        question: 'What is the intense fear of spiders called?',
+        answer: [
+            { text: 'Agoraphobia', correct: false },
+            { text: 'Acrophobia', correct: false },
+            { text: 'Arachnophobia', correct: true },
+            { text: 'Achluophobia', correct: false }
         ]
     },
 ]

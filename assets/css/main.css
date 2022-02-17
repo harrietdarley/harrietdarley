@@ -6,14 +6,13 @@ html {
 }
 
 body {
-    min-height: 100%;
+background-color:#1F75FE;
 }
 
 /*HOMEPAGE HEADINGS*/
 
 #firstpagesection {
 background-color:#1F75FE;
-height: 100%;
 }
 
 .hidden {
@@ -218,8 +217,8 @@ display: flex;
 }
 
 .answer-button {
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 200px;
     border-radius: 25px;
     color: white;
     font-size: 30px;
@@ -250,6 +249,7 @@ display: flex;
     background-color: red;
 }
 
+/*Next Button*/
 #next-btn-container {
     display: flex;
     align-items: center;
@@ -265,4 +265,31 @@ display: flex;
     font-family: bungee, sans-serif;
 font-weight: 500;
 font-size: 32px;
+}
+
+/*Score Section*/
+#score-div {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scoretext {
+    font-size: 40px;
+    color: lightgray;
+    font-family: bungee, sans-serif;
+    font-weight: 500;
+    margin: 20px;
+    padding-top: 50px;
+
+}
+
+#second-home-div {
+    text-align: center;
+}
+
+#second-home-btn {
+    background: none;
+   border: none;
 }
