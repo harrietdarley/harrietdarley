@@ -12,11 +12,15 @@ const answerButtonsElement = document.querySelector('#answersdiv .row');
 const buttonsAnswer = document.getElementsByClassName('answersdiv');
 const nextButton = document.getElementById('next-button');
 const scoreText = document.getElementById('scoretext');
-const homeButtonTwo = document.getElementById('second-home-btn')
+const homeButtonTwo = document.getElementById('second-home-btn');
+const confirmHomeBtn = document.getElementById('confirm-button');
+const cancelHomeBtn = document.getElementById('cancel-home-btn');
+const confirmationModal = document.getElementById('confirmCloseModal');
+const questionModal = document.getElementById('header-question')
+const cancelQuestionModal = document.getElementById('close-question-button');
 
 let answerSelected = false;
 let overallScore = 0;
-
 
 //Text Animation https://tobiasahlin.com
 // Get all the elements with the .ml2 class
@@ -46,8 +50,6 @@ anime.timeline({ loop: true })
         delay: 2000
     });
 
-
-
 //VOLUME FUNCTION
 const mute = (audio, btn1, btn2) => {
     if (audio.muted) {
@@ -68,6 +70,7 @@ const initAudioPlayer = () => {
     const audio = new Audio();
     audio.src = "assets/audio/bensound-allthat.mp3";
     audio.loop = true;
+    audio.muted = true;
     //add event handling 
     volBtns[0].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
     volBtns[1].addEventListener('click', () => mute(audio, volBtns[0], volBtns[1]));
@@ -81,11 +84,16 @@ let timeLeft = 30;
 let timerId = null;
 
 const countdown = () => {
-    if (timeLeft == -1) {
+    if (timeLeft == 0) {
         clearInterval(timerId);
+        //change background colour of buttons and stop hover 
+        //automatically go onto next question
+        answerSelected = true;
+        triggerNext();
+        //only triggernext when delay of 2 seconds
     } else {
-        timerCountdown.innerHTML = timeLeft;
         timeLeft--;
+        timerCountdown.innerHTML = timeLeft;
     }
 }
 
@@ -95,23 +103,41 @@ const startTimer = () => {
     timerCountdown.innerHTML = timeLeft;
 }
 
+const pauseTimer = () => {
+    console.log("pause Timer")
+    clearInterval(timerId)
+    timerCountdown.innerHTML = timeLeft;
+
+}
+
+const continueTimer = () => {
+    console.log('Continue Timer');
+    clearInterval(timerId);
+    timerId = setInterval(countdown, 1000);
+    timerCountdown.innerHTML = timeLeft;
+}
+
 //ADDING HOME BUTTON FUNCTIONALITY
 const goHome = () => {
+    confirmationModal.classList.add('hidden');
     homeSection.classList.remove('hidden');
     gameSection.classList.add('hidden');
 }
 
-goHomeButton.addEventListener('click', goHome);
-
+goHomeButton.addEventListener('click', pauseTimer);
+confirmHomeBtn.addEventListener('click', goHome);
+cancelHomeBtn.addEventListener('click', continueTimer);
+questionModal.addEventListener('click', pauseTimer);
+cancelQuestionModal.addEventListener('click', continueTimer);
 
 //START GAME 
 const startGame = (_initialTimer) => {
     initialTimer = _initialTimer;
-    homeSection.classList.add('hidden');
-    gameSection.classList.remove('hidden');
     shuffledQuestions = gameData.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     setNextQuestion();
+    homeSection.classList.add('hidden');
+    gameSection.classList.remove('hidden');
 }
 
 
@@ -122,8 +148,7 @@ playHardButton.addEventListener('click', () => startGame(30));
 //GAME DATA 
 let shuffledQuestions, currentQuestionIndex;
 
-//NEXT BUTTON
-nextButton.addEventListener('click', () => {
+const triggerNext = () => {
     if (answerSelected) {
         currentQuestionIndex++;
         if (currentQuestionIndex >= shuffledQuestions.length) {
@@ -134,14 +159,11 @@ nextButton.addEventListener('click', () => {
         }
         answerSelected = false;
     }
-})
+};
 
-const showScoreScreen = () => {
-    homeSection.classList.add('hidden');
-    gameSection.classList.add('hidden');
-    scoreSection.classList.remove('hidden');
-    scoreText.innerText = `You scored: ${overallScore} / ${shuffledQuestions.length} !`;
-}
+
+//NEXT BUTTON
+nextButton.addEventListener('click', () => triggerNext());
 
 const setNextQuestion = () => {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -178,6 +200,18 @@ const selectAnswer = (event) => {
     } else {
         selectedButton.style.background = "red";
     }
+    document.getElementById('answersbutton-1').setAttribute('disabled', 'disabled');
+    document.getElementById('answersbutton-2').setAttribute('disabled', 'disabled');
+    document.getElementById('answersbutton-3').setAttribute('disabled', 'disabled');
+    document.getElementById('answersbutton-4').setAttribute('disabled', 'disabled');
+}
+
+
+const showScoreScreen = () => {
+    homeSection.classList.add('hidden');
+    gameSection.classList.add('hidden');
+    scoreSection.classList.remove('hidden');
+    scoreText.innerText = `You scored: ${overallScore} / ${shuffledQuestions.length} !`;
 }
 
 const returnHomePage = () => {
@@ -371,3 +405,4 @@ const gameData = [
         ]
     },
 ]
+

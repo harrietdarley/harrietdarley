@@ -8,7 +8,7 @@
     <title>Ultimate Knowledge Quiz</title>
 
     <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_io (1)/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io (1)/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io (1)/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -48,7 +48,6 @@
                 </div>
             </div>
         </header>
-
 
         <section class="buttons-container container">
             <div class="game-btn-container col-12 col-sm-8 offset-sm-2 col-lg-10 offset-lg-1 d-flex align-items-center d-flex justify-content-center"
@@ -121,27 +120,101 @@
             </div>
         </div>
 
+
+        <!--Footer-->
+        <footer class="wrapper" id="footercontainer">
+            <div class="footer">
+                <p id="footertext">&copy; Harriet Darley</p>
+            </div>
+        </footer>
     </section>
+
 
     <!--SECOND PAGE-->
     <section id="secondpagesection" class="hidden">
+
         <!--Header Buttons-->
         <header>
             <button id="headervolbtn">
                 <img src="./assets/images/icons8-mute-96.png" alt="headervolimg" class="vol-img small" />
             </button>
-            <button id="homebtn">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#confirmCloseModal" id="homebtn">
                 <img src="./assets/images/icons8-home-50.png" alt="headerhomeimg" id="header-homeimg" />
             </button>
+            <div id="modal-two">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#headerModal" id="header-question">
+                    <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="headerquestionimg"
+                        class="header-question-icon small" />
+                </button>
+            </div>
         </header>
+
+        <!--Modal-->
+        <div class="modal fade" id="headerModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true"
+            data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="questionModalLabel">Instructions</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modalsubheading">How to Play</h2>
+                        <p class="modalparagraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
+                            question by
+                            clicking on one of the
+                            options and press submit before the timer runs out. If the question is correct then the
+                            answer
+                            will turn green,
+                            however if it turns red it is incorrect.
+                            To pause or return home press the home
+                            button in the right top corner. To turn on or mute the music click on the volume button.</p>
+                        <h2 class="modalsubheading">Game Modes</h2>
+                        <p class="modalparagraph">Easy Mode: The timer will be set to 1 minute. <br> Hard Mode: The
+                            timer
+                            will set to 30 seconds
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="close-question-button"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Confirm close-->
+        <div class="modal fade" id="confirmCloseModal" tabindex="-1" role="dialog"
+            aria-labelledby="confirmCloseModalLabel" aria-hidden="true" data-bs-backdrop="static"
+            data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="confirmCloseModalLabel">Instructions</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modalsubheading">Are you sure?</h2>
+                        <p class="modalparagraph">Return home by clicking yes. Return back to game by clicking cancel.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="confirm-button"
+                            data-bs-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-home-btn"
+                            data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--Question-->
         <div id="questiondiv">
             <p id="question"></p>
         </div>
+
         <!--Timer-->
         <div class="container" id="timer">
             <p id="timerCountdown"></p>
         </div>
+
         <!--Answers Buttons-->
         <section class="answers-container container">
             <div class="answer-btn-container" id="answersdiv">
@@ -149,11 +222,20 @@
                 </div>
             </div>
         </section>
+
         <!--Next Button-->
         <div id="next-btn-container">
             <button id="next-button">Next</button>
         </div>
+
+        <!--Footer-->
+        <footer class="wrapper" id="footercontainer">
+            <div class="footer">
+                <p id="footertext">&copy; Harriet Darley</p>
+            </div>
+        </footer>
     </section>
+
 
     <!--THIRD PAGE-->
     <section id="thirdpagesection" class="hidden">
@@ -166,6 +248,13 @@
                 <img src="./assets/images/icons8-home-50.png" alt="headerhomeimg" id="header-homeimg" />
             </button>
         </div>
+
+        <!--Footer-->
+        <footer class="wrapper" id="footercontainer">
+            <div class="footer">
+                <p id="footertext">&copy; Harriet Darley</p>
+            </div>
+        </footer>
     </section>
 
     <!--Heading JavaScript-->
