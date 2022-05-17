@@ -89,4 +89,32 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 **Footer** - the footer displays that I am the owner of the website. 
 
 ### Features Left to Implement 
-**Progress Bar** - I would like to introduce a progress bar to inform the user how far through the questions I am 
+**Progress Bar** - I would like to introduce a progress bar to inform the user how far through the questions they are. 
+**Previous Scores** - When I have the skills, I would like to store previous user's scores, so they can compare their previous scores to their present score and keep track of their progress. 
+**Online Play** - I would like to introduce an online mode where they can compete against other users online.
+
+## Technologies Used
+- [**Abode XD**](https://www.adobe.com/uk/products/xd.html)
+    - I used Abode XD to make designs of my website so I had a template for building tha actual site.
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+    - My project uses HTML5 to create the basic elements and content of my website.
+- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
+    - My project uses CSS3 to add custom styles to the website's elements and content.
+- [**Bootstrap**](https://getbootstrap.com)
+    - I used Bootstrap v5.0 to add a responsive grid system, and to use the prebuilt components, JavaScript plugins and Bootstrap styles, and I edited them for a desired effect. 
+- [**JavaScript**](https://www.javascript.com/)
+    - I used JavaScript to add functionality and interactivity to my game. This is the main technology used.
+- [**Tobias Ahlin**](https://tobiasahlin.com/moving-letters/)
+    - The project uses Tobias Ahlian's JavaScript template to move letters. 
+-[**Abode**](https://fonts.adobe.com)
+  - I used Abode Fonts to style my text.
+- [**Icons8**](https://icons8.com)
+    - I used Icons8 to obtain all my icons.
+- [**Visual Studio Code**](https://code.visualstudio.com)
+    - I used Visual Studio Code to write the code for my project. 
+
+### Version Control
+- [**Git**](https://git-scm.com/)
+    - I've used Git as a version control system to regularly add and commit changes made to my project.
+- [**GitHub**](https://github.com/)
+    - I've used GitHub as a remote repository to push and store changes to my project. Also using GitHub pages to deploy my website in a live environment.
