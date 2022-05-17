@@ -56,7 +56,7 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 - To understand how to play the game, the user should click on the button and read instructions. 
 - The user should then choose whether to play on 'easy' (they need to answer the question in one minute) or 'hard' mode ((they need to answer the question in 30 seconds). 
 - When the game starts, the user should click on the answer they believe is correct before the timer runs out. They should not be able to move onto the next question if they haven't chosen an answer and the timer is running.
-- When their answer has been chosen, the button will either turn green or red depending on whether the answer is correct or incorrect. If it is incorrect then the correct button will turn green as well. 
+- When their answer has been chosen, the button will either turn green or red depending on whether the answer is correct or incorrect. If it is incorrect then the correct button will turn green as well. The timer will stop. 
 - The user is then required to click on the next button to move onto the next question. 
 - If the user fails to answer the question in time, the game will automatically move onto the next question. 
 - Whilst the game is being played, the user can turn the volume on and off and play and pause the game. 
@@ -69,7 +69,24 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 - **Volume Button** - Users can turn on and off the music by clicking the volume icon. The icon will change depending on the sound.
 - **Play Easy Mode** - By clicking on the Play Easy button the user is choosing the easier way to play the game as well as starting the game. The user will have 1 minute to answer each question. 
 - **Play Hard Mode** - By clicking on the Play Hard button the user is choosing the harder way to play the game as well as starting the game. The user will have 30 seconds to answer each question. 
-- **'How to Play' Button** - When the user clicks the 'How to Play' Button, a modal will appear 
+- **'How to Play' Button** - When the user clicks the 'How to Play' Button, a modal will appear explaining the instructions of how to play the game. 
 
 #### Game Page
+- **Header Buttons** 
+  - Volume button - the user can turn on and off the volume
+  - 'How to Play' button with '?' icon - the user can read the instructions of how to play the game
+  - Pause & Play button - the user can toggle the pause and play button to stop and start the game. The icon will change depending. 
+  - Home button - when the home button is clicked a modal will appear confirming whether the user wants to go home or cancel and go back to the game. 
+- **Timer** - the timer goes for either 30 seconds or 1 minute depending on which mode the user chose, the user must answer the question in the time, otherwise the game will automatically move onto the next question. The timer will be stopped when an answer is chosen. 
+- **Answer buttons** - there are four answer buttons, the user must chose one to answer the question. If their answer is correct the button will turn green. But if their answer is incorrect the button will turn red and the correct button will also turn green. The buttons will be disabled once one has been clicked to prevent two answers being chosen. 
+**Next button** - the user can use the next button to move onto the next question. The button will only work when an answer has been selected. 
 
+#### Score Page
+**Score Text** - the user will be shown their overall final score. 
+**Home Button** - the user must press the home button in order to go home and restart the game. 
+
+#### Footer
+**Footer** - the footer displays that I am the owner of the website. 
+
+### Features Left to Implement 
+**Progress Bar** - I would like to introduce a progress bar to inform the user how far through the questions I am 
