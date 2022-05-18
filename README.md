@@ -149,4 +149,26 @@ I used GitHub Pages as a hosting platform for my project. I did the following st
 5. Created a new repository called 'harriet-project' in GitHub. 
 6. Used the `git remote add origin`[https://harrietdarley.github.io/harriet-project.git](https://github.com/harrietdarley/project-two-repo) command to add the remote origin to my local Git repository. 
 7. Used the `git push -u origin master` command and entered my GitHub username and password to push the files to GitHub. 
-8. In GitHub, I selected the 'master branch' option in 'Settings' on my repository page under the 'GitHub Pages' selection. 
+8. In GitHub, I selected the 'master branch' option in 'Settings' on my repository page under the 'GitHub Pages' selection.
+
+### Respository Link 
+Click the link below to view my project in the live environment. 
+
+**ADD**
+
+### Running Code Locally
+Users can run my code locally by downloading a local copy of my code to their desktop by going to my GitHub repository.
+
+## Credits
+### Content
+- All of the code is written by me. 
+- Apart from code to add functionality to the title text - [**Tobias Ahlin**](https://tobiasahlin.com/moving-letters/)
+
+### Media 
+- ** Audio ** - The music is from [**bensound.com**](https://www.bensound.com/royalty-free-music/track/all-that-chill-hop)
+
+### Acknowledgements 
+- I received guidance from my mentor, Sunny Hebbar. He helped me with the a few functionality problems I had with my website. 
+
+### Disclaimer 
+- This website is for educational purposes.
