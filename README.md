@@ -162,10 +162,10 @@ Users can run my code locally by downloading a local copy of my code to their de
 ## Credits
 ### Content
 - All of the code is written by me. 
-- Apart from code to add functionality to the title text - [**Tobias Ahlin**](https://tobiasahlin.com/moving-letters/)
+- Apart from the code to add functionality to the title text - [**Tobias Ahlin**](https://tobiasahlin.com/moving-letters/)
 
 ### Media 
-- ** Audio ** - The music is from [**bensound.com**](https://www.bensound.com/royalty-free-music/track/all-that-chill-hop)
+- **Audio** - The music is from [**bensound.com**](https://www.bensound.com/royalty-free-music/track/all-that-chill-hop)
 
 ### Acknowledgements 
 - I received guidance from my mentor, Sunny Hebbar. He helped me with the a few functionality problems I had with my website. 
