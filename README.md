@@ -41,13 +41,11 @@ to make the game more enjoyable.
 
 ### Wireframes 
 I created my designs using Abode XD, I displayed two different aspects; one from a laptop and one from a phone, to ensure my webpage would be responsive from a variety of technology.
-
-![iPhone 12, 12 Pro – 1](https://user-images.githubusercontent.com/82885562/168827984-a8f31404-fa0c-4bc9-9b0c-407a82c14bcb.jpg)
-![Artboard – 1](https://user-images.githubusercontent.com/82885562/168828082-669a69ee-bfcf-47c2-80aa-30ac77dcc3e9.jpg)
-![Artboard – 2](https://user-images.githubusercontent.com/82885562/168828137-c52019ca-151d-442c-9291-e55b9efd4ded.jpg)
-![iPhone XR, XS Max, 11 – 1](https://user-images.githubusercontent.com/82885562/168828255-2fc7c840-cb8b-4ac3-afd3-b5e0d5f60c83.jpg)
-![iPhone XR, XS Max, 11 – 2](https://user-images.githubusercontent.com/82885562/168828288-2fbca802-eb1d-4d67-9c35-02c5466d470a.jpg)
-![iPhone X, XS, 11 Pro – 1](https://user-images.githubusercontent.com/82885562/168828315-0e34c78f-67fd-4de5-8147-99e89463a584.jpg)
+![iPhone 12, 12 Pro – 1](https://user-images.githubusercontent.com/82885562/169028844-91fe63e6-dfec-43d1-a41c-839f0b68acbf.jpg)
+![Artboard – 1](https://user-images.githubusercontent.com/82885562/169028861-bd00381c-a59b-4ade-87e5-f676f1cc7e83.jpg)
+![Artboard – 2](https://user-images.githubusercontent.com/82885562/169028877-be98ac06-bd88-446c-bc07-f053b7b6b3ef.jpg)
+![iPhone XR, XS Max, 11 – 1](https://user-images.githubusercontent.com/82885562/169028898-a5512e43-1a93-4522-8c58-429ff5588cc5.jpg)
+![iPhone X, XS, 11 Pro – 1](https://user-images.githubusercontent.com/82885562/169028931-db015e9d-0a1a-49ac-8331-4235e3d3b86a.jpg)
 
 ## Features
 
