@@ -41,10 +41,15 @@ to make the game more enjoyable.
 
 ### Wireframes 
 I created my designs using Abode XD, I displayed two different aspects; one from a laptop and one from a phone, to ensure my webpage would be responsive from a variety of technology.
+
 ![iPhone 12, 12 Pro – 1](https://user-images.githubusercontent.com/82885562/169028844-91fe63e6-dfec-43d1-a41c-839f0b68acbf.jpg)
+
 ![Artboard – 1](https://user-images.githubusercontent.com/82885562/169028861-bd00381c-a59b-4ade-87e5-f676f1cc7e83.jpg)
+
 ![Artboard – 2](https://user-images.githubusercontent.com/82885562/169028877-be98ac06-bd88-446c-bc07-f053b7b6b3ef.jpg)
-![iPhone XR, XS Max, 11 – 1](https://user-images.githubusercontent.com/82885562/169028898-a5512e43-1a93-4522-8c58-429ff5588cc5.jpg)
+
+![iPhone XR, XS Max, 11 – 1](https://user-images.githubusercontent.com/82885562/169029225-bbf2ee57-24ac-4018-a509-89c3149e6584.jpg)
+![iPhone XR, XS Max, 11 – 2](https://user-images.githubusercontent.com/82885562/169029295-d71670e8-42b5-47b9-b03d-0fc187a1d689.jpg)
 ![iPhone X, XS, 11 Pro – 1](https://user-images.githubusercontent.com/82885562/169028931-db015e9d-0a1a-49ac-8331-4235e3d3b86a.jpg)
 
 ## Features
@@ -116,3 +121,32 @@ I created my designs using Abode XD, I displayed two different aspects; one from
     - I've used Git as a version control system to regularly add and commit changes made to my project.
 - [**GitHub**](https://github.com/)
     - I've used GitHub as a remote repository to push and store changes to my project. Also using GitHub pages to deploy my website in a live environment.
+
+## Testing 
+### Testing User Stories
+
+### Automated Testing
+
+### Responsive Testing 
+
+### Additional Testing 
+
+### HTML & CSS Testing 
+- I used the W3C HTML Validator tool and the W3C CSS Validator tool to validate both my HTML and CSS Code.
+
+### Interesting Bugs or Problems 
+- **Sound**
+- **Timer**
+- **Receiving score**
+
+## Deployment
+I used GitHub Pages as a hosting platform for my project. I did the following steps to deploy my website to GitHub Pages: 
+
+1. Opened a new terminal window in my Visual Studio Code workspace. 
+2. Used the `git init` command to initialise the Git. 
+3. Used the `git add .` command to add all files to Git. 
+4. Used the `git commit -m "Initial Commit"` command to commit all the files to Git.
+5. Created a new repository called 'harriet-project' in GitHub. 
+6. Used the `git remote add origin`[https://harrietdarley.github.io/harriet-project.git](https://github.com/harrietdarley/project-two-repo) command to add the remote origin to my local Git repository. 
+7. Used the `git push -u origin master` command and entered my GitHub username and password to push the files to GitHub. 
+8. In GitHub, I selected the 'master branch' option in 'Settings' on my repository page under the 'GitHub Pages' selection. 
