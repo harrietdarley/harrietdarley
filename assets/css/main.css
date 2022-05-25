@@ -1,93 +1,88 @@
-html {
-    height: 100%;
-}
 
 body {
-background-color:#1F75FE;
+    height: 100%;
+    background-color: darkcyan;
 }
 
 /*Footer*/
 .footer {
     text-align: center;
-    margin: 0 30px;
 }
 
-#footertext {
+
+.footer-text {
     font-family: bungee, sans-serif;
-font-weight: 500;
-color: white;
+    font-weight: 500;
+    color: white;
 }
 
 
 /*FIRST SECTION*/
 /*Homepage Headings*/
-#firstpagesection {
-background-color:#1F75FE;
-}
-
 .hidden {
     display: none;
 }
 
 
 .title-container {
-     display: flex;
-  text-align: center;
-  align-items: center; ; 
-  justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center; ; 
+    justify-content: center;
 }
 
 .row {
     margin: 0;
 }
 
-#titleone {
+#title-one {
     font-size: 40px;
- font-family: bungee, sans-serif;
-font-weight: 500;
-font-style: normal;
-line-height: 35px;
-color: #000950;
+    font-family: bungee, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 35px;
+    color: #000950;
+    padding-top: 20px;
 }
 
 #ultimate {
     font-size: 90px;
     line-height: 90px;
     font-family: bungee, sans-serif;
-font-weight: 800;
-font-style: normal;
-color: white;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
 }
 
 #knowledge {
     font-size: 40px;
     font-family: bungee, sans-serif;
-font-weight: 400;
-font-style: normal;
-color: #000950;
+    font-weight: 400;
+    font-style: normal;
+    color: #000950;
 }
 
 #quiz {
     font-size: 40px;
     font-family: bungee, sans-serif;
-font-weight: 400;
-font-style: normal;
-line-height: 25px;
-color: #000950;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    color: #000950;
 }
 
-/*Buttons Section*/
-#buttonsdiv {
+/* Section*/
+#buttons-div {
     max-width: 100%;
     height: 350px;
-    background-color: #ACE5EE;
+    background-color: aquamarine;
     padding: 0;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .icons-wrapper {
-display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
@@ -118,7 +113,7 @@ display: flex;
 }
 
 
-.icontext {
+.icon-text {
     font-size: 17px;
     font-family: bungee, sans-serif;
 }
@@ -133,11 +128,11 @@ display: flex;
     font-weight: 800;
 }
 
-.modalsubheading {
+.modal-subheading {
     font-family: bungee, sans-serif;
 }
 
-.modalparagraph {
+.modal-paragraph {
     font-family: monospace;
 }
 
@@ -148,12 +143,6 @@ display: flex;
 }
 
 /*SECONDSECTION*/
-#secondpagesection {
-    background-color: #262934;
-    width: 100vw; 
-    min-height: 100vh;
-
-}
 
 /*Buttons*/
 .vol-img {
@@ -163,15 +152,24 @@ display: flex;
 .small {
     height: 50px;
     width: 50px;
+    margin-top: 25px;
 }
 
-#headervolbtn {
- background:none;
+#header-vol-btn {
+    background:none;
     border: none;
     margin-left: 10px;
 }
 
-#homebtn {
+#home-btn {
+   float: right;
+   background: none;
+   border: none;
+   margin-top: 5px;
+    margin-right: 10px;
+}
+
+#header-pause-btn {
    float: right;
    background: none;
    border: none;
@@ -194,16 +192,16 @@ display: flex;
 
 
 /*Questions*/
-#questiondiv {
+#question-div {
     text-align: center;
     margin-top: 10px;
 }
 
 #question {
-font-size: 32px;
-color: lightgray;
-font-family: bungee, sans-serif;
-font-weight: 500;
+    font-size: 32px;
+    color: lightgray;
+    font-family: bungee, sans-serif;
+    font-weight: 500;
 }
 
 /*Timer*/
@@ -220,21 +218,21 @@ font-weight: 500;
     margin-top: 25px;
 }
 
-#timerCountdown {
+#timer-countdown {
     padding-top: 15px;
     font-size: 36px;
     font-weight: bold;
 }
 
 /*Answers*/
-#answersdiv {
+#answers-div {
     padding: 0;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
 .answers-wrapper {
-display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
@@ -280,8 +278,8 @@ display: flex;
     height: 55px;
     border-radius: 15px;
     font-family: bungee, sans-serif;
-font-weight: 500;
-font-size: 32px;
+    font-weight: 500;
+    font-size: 32px;
 }
 
 /*THIRD SCORE SECTION*/
@@ -292,7 +290,7 @@ font-size: 32px;
     justify-content: center;
 }
 
-#scoretext {
+#score-text {
     font-size: 40px;
     color: lightgray;
     font-family: bungee, sans-serif;
@@ -312,3 +310,100 @@ font-size: 32px;
    padding-bottom: 75px;
 }
 
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 575px) {
+    #ultimate {
+    font-size: 60px;
+    line-height: 50px;
+    padding-top: 10px;
+}
+
+#knowledge {
+    font-size: 30px;
+}
+
+#quiz {
+    font-size: 30px;
+    line-height: 25px;
+}
+
+#question {
+    font-size: 22px;
+}
+
+#timer {
+    width: 90px;
+    height: 90px;
+}
+.answer-button {
+    width: 200px;
+    height: 60px;
+    font-size: 15px;
+}
+
+.answers-wrapper {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#next-button {
+    width: 90px;
+    height: 40px;
+    font-size: 27px;
+}
+}
+
+@media screen and (max-width: 390px) {
+#title-one {
+    font-size: 30px;
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+#ultimate {
+    font-size: 45px;
+    line-height: 30px;
+}
+
+#knowledge {
+    font-size: 25px;
+}
+
+#quiz {
+    font-size: 25px;
+    line-height: 10px;
+}
+}
+
+@media screen and (max-width: 340px) {
+.icon-text {
+    font-size: 12px;
+}
+}
+
+@media screen and (min-height: 650px) {
+#buttons-div {
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+}
+
+@media screen and (min-height: 720px) {
+#title-one {
+    padding-top: 30px;
+}
+
+#buttons-div {
+    height: 425px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+}
+}
+
+@media screen and (min-height: 825px) {
+#buttons-div {
+    height: 500px;
+}
+}

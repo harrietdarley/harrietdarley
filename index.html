@@ -20,20 +20,17 @@
     <!--Abode Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/ptu1rpx.css">
 
-    <!--Font Awesome Icons https://fontawesome.com: -->
-    <script src="https://kit.fontawesome.com/b36e6e10d4.js" crossorigin="anonymous"></script>
-
     <!--CSS link-->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
 </head>
 
 <body>
-    <section id="firstpagesection">
+    <section id="first-page-section">
         <!--FIRST PAGE-->
         <header class="top-header" id="heading">
             <div class="title-container">
                 <div class="row">
-                    <div id="titleone">
+                    <div id="title-one">
                         An
                     </div>
                     <div id="ultimate">
@@ -51,13 +48,13 @@
 
         <section class="buttons-container container">
             <div class="game-btn-container col-12 col-sm-8 offset-sm-2 col-lg-10 offset-lg-1 d-flex align-items-center d-flex justify-content-center"
-                id="buttonsdiv">
+                id="buttons-div">
                 <div class="row">
                     <!--Buttons-->
                     <div class="icons-wrapper col-6 col-lg-3">
                         <button id="volume-button">
                             <img src="./assets/images/icons8-mute-96.png" alt="volume-icon" class="vol-img" />
-                            <p class="icontext">VOLUME</p>
+                            <p class="icon-text">VOLUME</p>
                         </button>
                     </div>
                     <div class="icons-wrapper col-6 col-lg-3">
@@ -65,22 +62,22 @@
                             <!--Icons: https://icons8.com -->
                             <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png"
                                 alt="playeasy-icon" id="playeasy-icon" />
-                            <p class="icontext">PLAY EASY</p>
+                            <p class="icon-text">PLAY EASY</p>
                         </button>
                     </div>
                     <div class="icons-wrapper col-6 col-lg-3">
                         <button id="playhard-button">
                             <img src="https://img.icons8.com/fluency-systems-filled/96/000000/play.png"
                                 alt="playhard-icon" id="playhard-icon" />
-                            <p class="icontext">PLAY HARD</p>
+                            <p class="icon-text">PLAY HARD</p>
                         </button>
                     </div>
                     <div class="icons-wrapper col-6 col-lg-3">
                         <button type="button" id="question-button" data-bs-toggle="modal"
-                            data-bs-target="#questionModal">
+                            data-bs-target="#question-modal">
                             <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="question-icon"
                                 id="question-icon" />
-                            <p class="icontext">HOW TO PLAY</p>
+                            <p class="icon-text">HOW TO PLAY</p>
                         </button>
                     </div>
                 </div>
@@ -88,16 +85,16 @@
         </section>
 
         <!-- Modal -->
-        <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel"
+        <div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title" id="questionModalLabel">Instructions</h1>
+                        <h1 class="modal-title" id="question-modal-label">Instructions</h1>
                     </div>
                     <div class="modal-body">
-                        <h2 class="modalsubheading">How to Play</h2>
-                        <p class="modalparagraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
+                        <h2 class="modal-subheading">How to Play</h2>
+                        <p class="modal-paragraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
                             question by
                             clicking on one of the
                             options and press submit before the timer runs out. If the question is correct then the
@@ -106,8 +103,8 @@
                             however if it turns red it is incorrect.
                             To pause or return home press the home
                             button in the right top corner. To turn on or mute the music click on the volume button.</p>
-                        <h2 class="modalsubheading">Game Modes</h2>
-                        <p class="modalparagraph">Easy Mode: The timer will be set to 1 minute. <br> Hard Mode: The
+                        <h2 class="modal-subheading">Game Modes</h2>
+                        <p class="modal-paragraph">Easy Mode: The timer will be set to 1 minute. <br> Hard Mode: The
                             timer
                             will set to 30 seconds
                         </p>
@@ -122,44 +119,45 @@
 
 
         <!--Footer-->
-        <footer class="wrapper" id="footercontainer">
+        <footer class="wrapper footer-container">
             <div class="footer">
-                <p id="footertext">&copy; Harriet Darley</p>
+                <p class="footer-text">&copy; Harriet Darley</p>
             </div>
         </footer>
     </section>
 
 
     <!--SECOND PAGE-->
-    <section id="secondpagesection" class="hidden">
+    <section id="second-page-section" class="hidden">
 
         <!--Header Buttons-->
         <header>
-            <button id="headervolbtn">
-                <img src="./assets/images/icons8-mute-96.png" alt="headervolimg" class="vol-img small" />
+            <button id="header-vol-btn">
+                <img src="./assets/images/icons8-mute-96.png" alt="header-vol-img" class="vol-img small" />
             </button>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#confirmCloseModal" id="homebtn">
-                <img src="./assets/images/icons8-home-50.png" alt="headerhomeimg" id="header-homeimg" />
-            </button>
-            <div id="modal-two">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#headerModal" id="header-question">
-                    <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png" alt="headerquestionimg"
-                        class="header-question-icon small" />
-                </button>
-            </div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#confirm-close-modal" id="home-btn">
+                <img src="./assets/images/icons8-home-50.png" alt="header-home-img" id="header-home-img"
+                    class="small" />
+                <div id="modal-two">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#header-modal" id="header-question">
+                        <img src="https://img.icons8.com/ios-filled/96/000000/question-mark.png"
+                            alt="header-question-img" class="header-question-icon small" />
+                    </button>
+                </div>
+
         </header>
 
         <!--Modal-->
-        <div class="modal fade" id="headerModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true"
-            data-bs-backdrop="static">
+        <div class="modal fade" id="header-modal" tabindex="-1" aria-labelledby="question-modal-label"
+            aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title" id="questionModalLabel">Instructions</h1>
+                        <h1 class="modal-title" id="question-modal-label">Instructions</h1>
                     </div>
                     <div class="modal-body">
-                        <h2 class="modalsubheading">How to Play</h2>
-                        <p class="modalparagraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
+                        <h2 class="modal-subheading">How to Play</h2>
+                        <p class="modal-paragraph">Press "Play Easy" or "Play Hard" to begin the game. Answer the
                             question by
                             clicking on one of the
                             options and press submit before the timer runs out. If the question is correct then the
@@ -168,8 +166,8 @@
                             however if it turns red it is incorrect.
                             To pause or return home press the home
                             button in the right top corner. To turn on or mute the music click on the volume button.</p>
-                        <h2 class="modalsubheading">Game Modes</h2>
-                        <p class="modalparagraph">Easy Mode: The timer will be set to 1 minute. <br> Hard Mode: The
+                        <h2 class="modal-subheading">Game Modes</h2>
+                        <p class="modal-paragraph">Easy Mode: The timer will be set to 1 minute. <br> Hard Mode: The
                             timer
                             will set to 30 seconds
                         </p>
@@ -182,17 +180,17 @@
             </div>
         </div>
         <!-- Confirm close-->
-        <div class="modal fade" id="confirmCloseModal" tabindex="-1" role="dialog"
-            aria-labelledby="confirmCloseModalLabel" aria-hidden="true" data-bs-backdrop="static"
+        <div class="modal fade" id="confirm-close-modal" tabindex="-1" role="dialog"
+            aria-labelledby="confirm-close-modal-label" aria-hidden="true" data-bs-backdrop="static"
             data-bs-keyboard="false">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title" id="confirmCloseModalLabel">Instructions</h1>
+                        <h1 class="modal-title" id="confirm-close-modal-label">Instructions</h1>
                     </div>
                     <div class="modal-body">
-                        <h2 class="modalsubheading">Are you sure?</h2>
-                        <p class="modalparagraph">Return home by clicking yes. Return back to game by clicking cancel.
+                        <h2 class="modal-subheading">Are you sure?</h2>
+                        <p class="modal-paragraph">Return home by clicking yes. Return back to game by clicking cancel.
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -206,18 +204,18 @@
         </div>
 
         <!--Question-->
-        <div id="questiondiv">
+        <div id="question-div">
             <p id="question"></p>
         </div>
 
         <!--Timer-->
         <div class="container" id="timer">
-            <p id="timerCountdown"></p>
+            <p id="timer-countdown"></p>
         </div>
 
         <!--Answers Buttons-->
         <section class="answers-container container">
-            <div class="answer-btn-container" id="answersdiv">
+            <div class="answer-btn-container" id="answers-div">
                 <div class="row">
                 </div>
             </div>
@@ -229,44 +227,47 @@
         </div>
 
         <!--Footer-->
-        <footer class="wrapper" id="footercontainer">
+        <footer class="wrapper footer-container">
             <div class="footer">
-                <p id="footertext">&copy; Harriet Darley</p>
+                <p class="footer-text">&copy; Harriet Darley</p>
             </div>
         </footer>
     </section>
 
 
     <!--THIRD PAGE-->
-    <section id="thirdpagesection" class="hidden">
+    <section id="third-page-section" class="hidden">
         <div id="score-div">
-            <p id="scoretext">
+            <p id="score-text">
             </p>
         </div>
         <div id="second-home-div">
             <button id="second-home-btn">
-                <img src="./assets/images/icons8-home-50.png" alt="headerhomeimg" id="header-homeimg" />
+                <img src="./assets/images/icons8-home-50.png" alt="header-home-img" id="header-home-img" />
             </button>
         </div>
 
         <!--Footer-->
-        <footer class="wrapper" id="footercontainer">
+        <footer class="wrapper footer-container">
             <div class="footer">
-                <p id="footertext">&copy; Harriet Darley</p>
+                <div class="footer-text">&copy; Harriet Darley</div>
             </div>
         </footer>
     </section>
 
+    <!--Font Awesome Icons https://fontawesome.com: -->
+    <script src="https://kit.fontawesome.com/b36e6e10d4.js" crossorigin="anonymous"></script>
+
     <!--Heading JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-    <!--JavaScript link-->
-    <script src="assets/js/script.js" type="text/javascript"></script>
 
     <!-- Bootstrap JavaScript Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!--JavaScript link-->
+    <script src="assets/js/script.js" type="text/javascript"></script>
 
 </body>
 

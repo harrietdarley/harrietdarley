@@ -1,30 +1,32 @@
 //GLOBAL VARIABLES 
-const homeSection = document.getElementById('firstpagesection');
-const gameSection = document.getElementById('secondpagesection');
-const scoreSection = document.getElementById('thirdpagesection');
-const timerCountdown = document.getElementById('timerCountdown');
+const homeSection = document.getElementById('first-page-section');
+const gameSection = document.getElementById('second-page-section');
+const scoreSection = document.getElementById('third-page-section');
+const textWrapper = document.querySelectorAll('.ml2');
+const timerCountdown = document.getElementById('timer-countdown');
 const playEasyButton = document.getElementById('playeasy-button');
 const playHardButton = document.getElementById('playhard-button');
 const volBtns = document.getElementsByClassName('vol-img');
-const goHomeButton = document.getElementById('homebtn');
+const goHomeButton = document.getElementById('home-btn');
 const questionElement = document.getElementById('question');
-const answerButtonsElement = document.querySelector('#answersdiv .row');
-const buttonsAnswer = document.getElementsByClassName('answersdiv');
+const answerButtonsElement = document.querySelector('#answers-div .row');
+const buttonsAnswer = document.getElementsByClassName('answers-div');
 const nextButton = document.getElementById('next-button');
-const scoreText = document.getElementById('scoretext');
+const scoreText = document.getElementById('score-text');
 const homeButtonTwo = document.getElementById('second-home-btn');
 const confirmHomeBtn = document.getElementById('confirm-button');
 const cancelHomeBtn = document.getElementById('cancel-home-btn');
-const confirmationModal = document.getElementById('confirmCloseModal');
+const confirmationModal = document.getElementById('confirm-close-modal');
 const questionModal = document.getElementById('header-question')
 const cancelQuestionModal = document.getElementById('close-question-button');
+const pauseButton = document.getElementById('header-pause-btn');
+const cancelPauseButton = document.getElementById('header-play-btn');
 
 let answerSelected = false;
 let overallScore = 0;
 
 //Text Animation https://tobiasahlin.com
 // Get all the elements with the .ml2 class
-let textWrapper = document.querySelectorAll('.ml2');
 // Loop over the textWrapper array and apply the animation effect to each element in it
 textWrapper.forEach(el => {
     el.innerHTML = el.textContent.replace(
@@ -104,14 +106,11 @@ const startTimer = () => {
 }
 
 const pauseTimer = () => {
-    console.log("pause Timer")
     clearInterval(timerId)
     timerCountdown.innerHTML = timeLeft;
-
 }
 
 const continueTimer = () => {
-    console.log('Continue Timer');
     clearInterval(timerId);
     timerId = setInterval(countdown, 1000);
     timerCountdown.innerHTML = timeLeft;
@@ -129,6 +128,7 @@ confirmHomeBtn.addEventListener('click', goHome);
 cancelHomeBtn.addEventListener('click', continueTimer);
 questionModal.addEventListener('click', pauseTimer);
 cancelQuestionModal.addEventListener('click', continueTimer);
+
 
 //START GAME 
 const startGame = (_initialTimer) => {
@@ -171,12 +171,13 @@ const setNextQuestion = () => {
     startTimer();
 }
 
+
 const showQuestion = (gameData) => {
     questionElement.innerText = gameData.question;
     let answersBlock = '';
     gameData.answer.forEach((answer, index) => {
         const answerButton = `
-            <div class="answers-wrapper col-lg-6 col-md-6 col-lg-3">
+            <div class="answers-wrapper col-lg-6 col-sm-6 col-lg-3">
                 <button class="btn answer-button" id="answersbutton-${index + 1}" onclick="selectAnswer(event)">${answer.text}</button>
             </div>
         `;
@@ -197,8 +198,10 @@ const selectAnswer = (event) => {
     if (answerToValidate.correct) {
         selectedButton.style.background = "green";
         overallScore++;
+        pauseTimer()
     } else {
         selectedButton.style.background = "red";
+        pauseTimer()
     }
     document.getElementById('answersbutton-1').setAttribute('disabled', 'disabled');
     document.getElementById('answersbutton-2').setAttribute('disabled', 'disabled');
