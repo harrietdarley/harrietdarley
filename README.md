@@ -20,7 +20,6 @@ As a player I want to:
   - Playing on 'easy' mode means one has more time (one minute) to answer the question. 
   - Playing on 'hard' mode means one has less time (30 seconds) to answer the question.
 - Be able to return home and stop the game. 
-- Be able to pause and play the game. 
 - Have four options to pick from. 
 - After choosing an answer, be told which answer is correct by the answer turning green & be told which answer is incorrect by the answer turning red. 
 - Move onto the next question if I can't answer. 
@@ -62,7 +61,7 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 - When their answer has been chosen, the button will either turn green or red depending on whether the answer is correct or incorrect. If it is incorrect then the correct button will turn green as well. The timer will stop. 
 - The user is then required to click on the next button to move onto the next question. 
 - If the user fails to answer the question in time, the game will automatically move onto the next question. 
-- Whilst the game is being played, the user can turn the volume on and off and play and pause the game. 
+- Whilst the game is being played, the user can turn the volume on and off and play and the game. 
 - They can also read the instructions which explain how to play and decide whether to end the game, when the modal appear the timer will be paused and when they return to the game it will continue.
 - When the user gets to the end of the game their results will be shown and then they can return to the home page by clicking on the home button. 
 
@@ -78,7 +77,6 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 - **Header Buttons** 
   - Volume button - the user can turn on and off the volume
   - 'How to Play' button with '?' icon - the user can read the instructions of how to play the game
-  - Pause & Play button - the user can toggle the pause and play button to stop and start the game. The icon will change depending. 
   - Home button - when the home button is clicked a modal will appear confirming whether the user wants to go home or cancel and go back to the game. 
 - **Timer** - the timer goes for either 30 seconds or 1 minute depending on which mode the user chose, the user must answer the question in the time, otherwise the game will automatically move onto the next question. The timer will be stopped when an answer is chosen. 
 - **Answer buttons** - there are four answer buttons, the user must chose one to answer the question. If their answer is correct the button will turn green. But if their answer is incorrect the button will turn red and the correct button will also turn green. The buttons will be disabled once one has been clicked to prevent two answers being chosen. 
