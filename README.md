@@ -152,7 +152,7 @@ I used GitHub Pages as a hosting platform for my project. I did the following st
 ### Respository Link 
 Click the link below to view my project in the live environment. 
 
-**ADD**
+(https://harrietdarley.github.io/project-two-repo/)
 
 ### Running Code Locally
 Users can run my code locally by downloading a local copy of my code to their desktop by going to my GitHub repository.
