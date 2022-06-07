@@ -138,7 +138,7 @@ body {
 
 #close-button {
     background-color: #1F75FE;
-    box-shadow: 2px;
+    box-shadow: 2px 3px;
     font-family: monospace;
 }
 
