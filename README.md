@@ -121,21 +121,20 @@ I created my designs using Abode XD, I displayed two different aspects; one from
     - I've used GitHub as a remote repository to push and store changes to my project. Also using GitHub pages to deploy my website in a live environment.
 
 ## Testing 
-### Testing User Stories
-
-### Automated Testing
-
 ### Responsive Testing 
+By using Google Chrome's web development tools, I could ensure that every change to my website worked on many different screen sizes. I double checked this by testing the website on different technology such as a mobile phone, tablet and laptop.
 
-### Additional Testing 
+### HTML5 and CSS3 Validation
+I used the W3C HTML Validator tool and the W3C CSS Validator tool to validate both my HTML and CSS Code.
 
-### HTML & CSS Testing 
-- I used the W3C HTML Validator tool and the W3C CSS Validator tool to validate both my HTML and CSS Code.
+### JavaScript Validation
+I used the [**JS Validator**](https://javascriptvalidator.net/) tool to validate my JavaScript code. 
 
 ### Interesting Bugs or Problems 
-- **Sound**
-- **Timer**
-- **Receiving score**
+- **Sound** - the volume would only play if the volume button was clicked on multiple times, a repeated error was shown and the DOMException: play() failed as the user didn't interact with the document first. 
+- **Moving to next question** - there was an issue when automatically moving onto the next question when the timer ran out, I managed to used the Chrome debugger tool to identify the bug and combat the problem.  
+- **Receiving score** - I found difficulty in processing the data to produce a finishing score, I solved this by using a global score value and incrementing the score after each answer.
+- **Question modal** - there was an error with my question modal on the home page, the JavaScript code that Bootstrap uses to render the modal was not working repeatedly due to an incorrect data-bs-target.
 
 ## Deployment
 I used GitHub Pages as a hosting platform for my project. I did the following steps to deploy my website to GitHub Pages: 
