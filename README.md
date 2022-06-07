@@ -32,11 +32,9 @@ and the range of functions they were using, helping me to start plan my game.
 One of my main focuses was to create a highly responsive and intuitive user interface to ensure a seamless experience for users. 
 
 ### Style Rationale 
-The majority of quizes I looked at online had quite basic designs and layouts, and all the questions were on one 
-page, therefore I decided that my game would be more responsive and look cleaner if each question had an individual page.
+The majority of quizes I looked at online had quite basic designs and layouts, and all the questions were on one page, therefore I decided that my game would be more responsive and look cleaner if each question had an individual page.
 
-I chose a bright colour scheme, a basic background and engaging and creative fonts to attract users to play the game and
-to make the game more enjoyable. 
+I chose a bright colour scheme, a basic background and engaging and creative fonts to attract users to play the game and to make the game more enjoyable. 
 
 ### Wireframes 
 I created my designs using Abode XD, I displayed two different aspects; one from a laptop and one from a phone, to ensure my webpage would be responsive from a variety of technology.
@@ -56,9 +54,9 @@ I created my designs using Abode XD, I displayed two different aspects; one from
 ### Functionality
 - The user is required to choose whether to turn volume on or off. 
 - To understand how to play the game, the user should click on the button and read instructions. 
-- The user should then choose whether to play on 'easy' (they need to answer the question in one minute) or 'hard' mode ((they need to answer the question in 30 seconds). 
+- The user should then choose whether to play on 'easy' (they need to answer the question in one minute) or 'hard' mode (they need to answer the question in 30 seconds). 
 - When the game starts, the user should click on the answer they believe is correct before the timer runs out. They should not be able to move onto the next question if they haven't chosen an answer and the timer is running.
-- When their answer has been chosen, the button will either turn green or red depending on whether the answer is correct or incorrect. If it is incorrect then the correct button will turn green as well. The timer will stop. 
+- When their answer has been chosen, the button will either turn green or red depending on whether the answer is correct or incorrect. The timer will stop. 
 - The user is then required to click on the next button to move onto the next question. 
 - If the user fails to answer the question in time, the game will automatically move onto the next question. 
 - Whilst the game is being played, the user can turn the volume on and off and play and the game. 
@@ -79,7 +77,7 @@ I created my designs using Abode XD, I displayed two different aspects; one from
   - 'How to Play' button with '?' icon - the user can read the instructions of how to play the game
   - Home button - when the home button is clicked a modal will appear confirming whether the user wants to go home or cancel and go back to the game. 
 - **Timer** - the timer goes for either 30 seconds or 1 minute depending on which mode the user chose, the user must answer the question in the time, otherwise the game will automatically move onto the next question. The timer will be stopped when an answer is chosen. 
-- **Answer buttons** - there are four answer buttons, the user must chose one to answer the question. If their answer is correct the button will turn green. But if their answer is incorrect the button will turn red and the correct button will also turn green. The buttons will be disabled once one has been clicked to prevent two answers being chosen. 
+- **Answer buttons** - there are four answer buttons, the user must chose one to answer the question. If their answer is correct the button will turn green. But if their answer is incorrect the button will turn red. The buttons will be disabled once one has been clicked to prevent two answers being chosen. 
 - **Next button** - the user can use the next button to move onto the next question. The button will only work when an answer has been selected. 
 
 #### Score Page
@@ -131,10 +129,10 @@ I used the W3C HTML Validator tool and the W3C CSS Validator tool to validate bo
 I used the [**JS Validator**](https://javascriptvalidator.net/) tool to validate my JavaScript code. 
 
 ### Interesting Bugs or Problems 
-- **Sound** - the volume would only play if the volume button was clicked on multiple times, a repeated error was shown and the DOMException: play() failed as the user didn't interact with the document first. 
+- **Sound** - the volume would only play if the  button was clicked on multiple times, a repeated error was shown and the DOMException: play() failed as the user didn't interact with the document first. 
 - **Moving to next question** - there was an issue when automatically moving onto the next question when the timer ran out, I managed to used the Chrome debugger tool to identify the bug and combat the problem.  
 - **Receiving score** - I found difficulty in processing the data to produce a finishing score, I solved this by using a global score value and incrementing the score after each answer.
-- **Question modal** - there was an error with my question modal on the home page, the JavaScript code that Bootstrap uses to render the modal was not working repeatedly due to an incorrect data-bs-target.
+- **Question modal** - there was an error with my question modal on the home page, the JavaScript code that Bootstrap uses to render the modal was not working repeatedly, this was due to using data-target not data-bs-target.
 
 ## Deployment
 I used GitHub Pages as a hosting platform for my project. I did the following steps to deploy my website to GitHub Pages: 
