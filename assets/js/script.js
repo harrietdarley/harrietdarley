@@ -106,7 +106,7 @@ const startTimer = () => {
 }
 
 const pauseTimer = () => {
-    clearInterval(timerId)
+    clearInterval(timerId);
     timerCountdown.innerHTML = timeLeft;
 }
 
